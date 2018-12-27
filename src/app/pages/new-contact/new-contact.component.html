@@ -1,139 +1,255 @@
-<div class="ui grid">
-    <div class="row">
-      <div class="five wide column">
-          <img class="ui medium rounded image centered align" src="https://semantic-ui.com/images/wireframe/square-image.png">
-          <h4 class="ui horizontal divider header">
-            <i class="address card outline icon"></i>
-            Name
-          </h4>
-          <table class="ui definition table">
-            <tbody>
-              <tr>
-                <td class="two wide column">First</td>
-                <td>
-                  <div class="ui input fluid">
-                    <input type="text">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Middle</td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Last</td>
-                <td>
-                  <div class="ui input fluid">
-                    <input type="text">
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Nickname</td>
-                <td>
-                  <div class="ui input fluid">
-                    <input type="text">
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
-      <div class="six wide column">
-          <h4 class="ui horizontal divider header">
-            <i class="address card icon"></i>
-            Basic Info
-          </h4>
-          <table class="ui definition table">
-            <tbody>
-              <tr>
-                <td class="two wide column center aligned"><i class="map marker alternate icon large red"></i></td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center aligned"><i class="mobile alternate icon large grey"></i></td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center aligned"><i class="envelope icon large orange"></i></td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center aligned"><i class="skype icon large blue"></i></td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center aligned"><i class="facebook icon large blue"></i></td>
-                <td>
-                    <div class="ui input fluid">
-                      <input type="text">
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="center aligned"><i class="birthday cake icon pink"></i></td>
-                <td>
-                  <div class="ui input fluid">
-                    <input suiDatepicker
-                    pickerMode="date">
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <h4 class="ui horizontal divider header">
-            <i class="pencil alternate icon"></i>
-            Custom fields
-          </h4>
-          <table class="ui definition table">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div class="ui grid">
+        <div class="row">
+          <div class="six wide column">
+            <h4 class="ui horizontal divider header">
+              <i class="address card outline icon"></i>
+              Basic Information
+            </h4>
+            <table class="ui definition table">
               <tbody>
                 <tr>
+                  <td class="two wide column">First</td>
                   <td>
-                    <div class="ui input">
-                      <input type="text">
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="firstname">
                     </div>
                   </td>
+                </tr>
+                <tr>
+                  <td>Middle</td>
                   <td>
-                    <div class="ui input">
-                      <input type="text">
+                      <div class="ui input fluid">
+                        <input type="text" autocomplete="off" spellcheck="off" ngModel name="middlename">
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Last</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="lastname">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Nickname</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="nickname">
                     </div>
                   </td>
                 </tr>
               </tbody>
             </table>
-      </div>
-      <div class="five wide column">
-          <h4 class="ui horizontal divider header">
-            <i class="sticky note icon"></i>
-            Notes
-          </h4>
-          <div class="ui input">
-            <textarea name="" id="" cols="43" rows="10" spellcheck="false" class="centered align"></textarea>
+            <h4 class="ui horizontal divider header">
+              <i class="map marker alternate icon"></i>
+              Address
+            </h4>
+            <table class="ui definition table">
+              <tbody>
+                <tr>
+                  <td class="two wide column">Add 1</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="address_1">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                <tr>
+                  <td>Add 2</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="address_2">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>City</td>
+                  <td>
+                      <div class="ui input fluid">
+                        <input type="text" autocomplete="off" spellcheck="off" ngModel name="city">
+                      </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>State</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="state">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Zip code</td>
+                  <td>
+                    <div class="ui input fluid">
+                      <input type="text" autocomplete="off" spellcheck="off" ngModel name="zip">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="ui divider"></div>
-          <div class="ui basic center aligned segment">
-            <button class="ui green button centered align">Create contact</button>
+          <div class="five wide column">
+              <h4 class="ui horizontal divider header">
+                <i class="address card icon"></i>
+                Contact Information
+              </h4>
+              <table class="ui definition table">
+                <tbody>
+                  <tr>
+                    <td class="center aligned two wide column"><i class="mobile icon large grey"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="home_phone">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="mobile alternate icon large grey"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="work_phone">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="viber icon large purple"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="viber">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="whatsapp icon large green"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="whatsapp">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="skype icon large blue"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="skype">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="envelope icon large orange"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="email">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="facebook icon large blue"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="facebook">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><img src="assets/icons/zoom.png" class="ui avatar image"></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="zoom">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="linkedin icon large blue"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="linkedln">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="twitter icon large blue"></i></td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="twitter">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="center aligned"><i class="birthday cake icon pink"></i></td>
+                    <td>
+                      <div class="ui input fluid">
+                        <input suiDatepicker ngModel name="date_of_birth"
+                        pickerMode="date">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
-      </div>
-    </div>
+          <div class="five wide column">
+              <h4 class="ui horizontal divider header">
+                <i class="briefcase icon"></i>
+                Company Information
+              </h4>
+              <table class="ui definition table">
+                <tbody>
+                  <tr>
+                    <td class="two wide column">Company</td>
+                    <td>
+                      <div class="ui input fluid">
+                        <input type="text" autocomplete="off" spellcheck="off"  ngModel name="company">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Position</td>
+                    <td>
+                        <div class="ui input fluid">
+                          <input type="text" autocomplete="off" spellcheck="off" ngModel name="position">
+                        </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Website</td>
+                    <td>
+                      <div class="ui input fluid">
+                        <input type="text" autocomplete="off" spellcheck="off"  ngModel name="Website">
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <h4 class="ui horizontal divider header">
+                <i class="pencil alternate icon"></i>
+                Custom fields
+              </h4>
+              <table class="ui definition table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="ui input fluid">
+                          <input type="text" #cfield autocomplete="off" spellcheck="off">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="ui input fluid">
+                          <input type="text" #cvalue autocomplete="off" spellcheck="off"
+                           (keyup.enter)="addCustom(cfield.value,cvalue.field)">
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+              </table>
+              <div class="ui divider"></div>
+              <div class="ui basic center aligned segment">
+                <button type="submit" class="ui green button centered align">Create contact</button>
+              </div>
+          </div>
+        </div>
   </div>
+</form>

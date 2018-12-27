@@ -1,0 +1,26 @@
+export interface Contact{
+    contact_id:number;
+    firstname:string;
+    middlename:string;
+    lastname:string;
+    nickname:string;
+    address_1:string;
+    address_2:string;
+    city:string;
+    state:string;
+    zip:string;
+    home_phone:string;
+    work_phone:string;
+    viber:string;
+    whatsapp:string;
+    skype:string;
+    email:string;
+    facebook:string;
+    zoom:string;
+    linkedln:string;
+    twitter:string;
+    date_of_birth:Date;
+    company:string;
+    position:string;
+    website:string;
+}
