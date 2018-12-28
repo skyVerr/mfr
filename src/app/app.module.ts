@@ -15,6 +15,7 @@ import { TypeComponent } from './pages/type/type.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { MfrComponent } from './pages/mfr/mfr.component';
 import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
+import { SingleMfrComponent } from './pages/single-mfr/single-mfr.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
     TypeComponent,
     ProjectComponent,
     MfrComponent,
-    NewMfrComponent
+    NewMfrComponent,
+    SingleMfrComponent
   ],
   imports: [
     BrowserModule,
