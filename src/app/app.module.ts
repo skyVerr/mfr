@@ -10,6 +10,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { NewContactComponent } from './pages/new-contact/new-contact.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
+import { CategoryComponent } from './pages/category/category.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     ContactsComponent,
     HomeComponent,
     ContactComponent,
-    NewContactComponent
+    NewContactComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

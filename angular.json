@@ -24,6 +24,7 @@
             ],
             "styles": [
               "src/Semantic/semantic.min.css",
+              "src/assets/modal.css",
               "src/styles.css"
             ],
             "scripts": []
