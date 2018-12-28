@@ -1,0 +1,52 @@
+<table class="ui celled table">
+    <thead>
+      <tr>
+        <th class="two wide column">Project Id</th>
+        <th>Project</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>98-A Corsair Remodel</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>98-A Corsair Lease/Sale</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Employment</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Relocation to USA</td>
+      </tr>
+    </tbody>
+    <tfoot class="full-width">
+      <tr>
+        <th></th>
+        <th colspan="4">
+          <button (click)="openModal()" class="ui right floated small primary labeled icon button">
+            <i class="archive icon"></i> Add Project
+          </button>
+        </th>
+      </tr>
+    </tfoot>
+  </table>
+  
+  <ng-template let-context let-modal="modal" #modalTemplate class="mini">
+      <div class="header">Add Project</div>
+      <div class="content">
+        <div class="ui right labeled input fluid">
+          <input type="text" placeholder="Enter Project name">
+          <a class="ui tag label">
+              Project name
+          </a>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="ui red button" (click)="modal.deny('denied')">Cancel</button>
+        <button class="ui green button" (click)="modal.approve('approved')" autofocus>OK</button>
+      </div>
+  </ng-template>

@@ -11,6 +11,8 @@ import { NewContactComponent } from './pages/new-contact/new-contact.component';
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './pages/category/category.component';
+import { TypeComponent } from './pages/type/type.component';
+import { ProjectComponent } from './pages/project/project.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { CategoryComponent } from './pages/category/category.component';
     HomeComponent,
     ContactComponent,
     NewContactComponent,
-    CategoryComponent
+    CategoryComponent,
+    TypeComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
