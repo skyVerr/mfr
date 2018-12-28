@@ -1,0 +1,55 @@
+<div class="ui centered grid">
+  <div class="eight wide column">
+    <h4 class="ui horizontal divider header">
+      Mfr Information
+    </h4>
+    <form class="ui form">
+      <div class="disabled field">
+        <label>Mfr no.</label>
+        <input placeholder="System generated" type="text" disabled="">
+      </div>
+      <div class="field">
+        <label>Contact</label>
+        <sui-select class="selection"
+                isSearchable="true"
+                #select>
+          <sui-select-option value="Virgilio Legaspi"> </sui-select-option>
+          <sui-select-option value="Melner Balce"> </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="field">
+        <label>Type</label>
+        <sui-select class="selection"
+                isSearchable="true"
+                #select>
+          <sui-select-option value="Phone"> </sui-select-option>
+          <sui-select-option value="Email"> </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="field">
+        <label>Category</label>
+        <sui-select class="selection"
+                isSearchable="true"
+                #select>
+          <sui-select-option value="Home Network"> </sui-select-option>
+          <sui-select-option value="Home Security"> </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="field">
+        <label>Project</label>
+        <sui-select class="selection"
+                isSearchable="true"
+                #select>
+          <sui-select-option value="Project 1"> </sui-select-option>
+          <sui-select-option value="project 2"> </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="ui divider"></div>
+      <div class="ui row column center aligned">
+        <div class="ui basic center aligned segment">
+          <button class="ui button green">Create mfr</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

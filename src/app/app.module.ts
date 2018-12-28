@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { CategoryComponent } from './pages/category/category.component';
 import { TypeComponent } from './pages/type/type.component';
 import { ProjectComponent } from './pages/project/project.component';
+import { MfrComponent } from './pages/mfr/mfr.component';
+import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ProjectComponent } from './pages/project/project.component';
     NewContactComponent,
     CategoryComponent,
     TypeComponent,
-    ProjectComponent
+    ProjectComponent,
+    MfrComponent,
+    NewMfrComponent
   ],
   imports: [
     BrowserModule,

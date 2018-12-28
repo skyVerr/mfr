@@ -9,15 +9,19 @@ import { NewContactComponent } from "./pages/new-contact/new-contact.component";
 import { CategoryComponent } from './pages/category/category.component';
 import { TypeComponent } from './pages/type/type.component';
 import { ProjectComponent } from './pages/project/project.component';
+import { MfrComponent } from './pages/mfr/mfr.component';
+import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home' ,component: HomeComponent },
+  { path: 'mfr' ,component: MfrComponent },
   { path: 'contacts' ,component: ContactsComponent },
   { path: 'category' ,component: CategoryComponent },
   { path: 'type' ,component: TypeComponent },
   { path: 'project' ,component: ProjectComponent },
   { path: 'contacts/new' ,component: NewContactComponent },
+  { path: 'mfr/new' ,component: NewMfrComponent },
   { path: 'contacts/:id' ,component: ContactComponent }
 ];
 
