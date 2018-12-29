@@ -1,0 +1,51 @@
+<h4 class="ui horizontal divider header">
+  Add new task
+</h4>
+<form class="ui form">
+  <div class="field">
+    <label>Asigned to</label>
+    <sui-select class="selection"
+        isSearchable="true"
+        #select>
+    <sui-select-option value="Melner Balce"> </sui-select-option>
+    <sui-select-option value="Virgilio Legaspi"> </sui-select-option>
+    </sui-select>
+  </div>
+  <div class="field">
+    <label>Task</label>
+    <input type="text" name="first-name" placeholder="Task">
+  </div>
+  <div class="field">
+    <label>Due</label>
+    <div class="ui input fluid">
+      <input suiDatepicker name="due"
+      pickerMode="date">
+    </div>
+  </div>
+  <div class="field">
+    <label>Dependencies</label>
+    <input type="text" name="first-name" placeholder="Dependencies">
+  </div>
+  <div class="field">
+    <label>Current Activites</label>
+    <input type="text" name="first-name" placeholder="Current Activites">
+  </div>
+  <div class="field">
+    <label>Resolution</label>
+    <textarea rows="2"></textarea>
+  </div>
+  <div class="grouped fields">
+    <label>Status</label>
+    <div class="field">
+        <sui-radio-button name="example" value="hello">Success</sui-radio-button>
+    </div>
+    <div class="field">
+        <sui-radio-button name="example" value="world">Warning</sui-radio-button>
+    </div>
+    <div class="field">
+        <sui-radio-button name="example" value="example">Danger</sui-radio-button>
+    </div>
+  </div>
+
+  <button class="ui button" type="submit">Submit</button>
+</form>

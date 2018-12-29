@@ -12,6 +12,8 @@ import { ProjectComponent } from './pages/project/project.component';
 import { MfrComponent } from './pages/mfr/mfr.component';
 import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
 import { SingleMfrComponent } from './pages/single-mfr/single-mfr.component';
+import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { TaskComponent } from './pages/task/task.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -23,7 +25,12 @@ const routes: Routes = [
   { path: 'project' ,component: ProjectComponent },
   { path: 'contacts/new' ,component: NewContactComponent },
   { path: 'mfr/new' ,component: NewMfrComponent },
-  { path: 'mfr/:id' ,component: SingleMfrComponent },
+  { path: 'mfr/:id' ,component: SingleMfrComponent,
+    children: [
+      { path: 'task/new', component: NewTaskComponent },
+      { path: 'task/:id', component: TaskComponent }
+    ]
+  },
   { path: 'contacts/:id' ,component: ContactComponent }
 ];
 

@@ -16,6 +16,8 @@ import { ProjectComponent } from './pages/project/project.component';
 import { MfrComponent } from './pages/mfr/mfr.component';
 import { NewMfrComponent } from './pages/new-mfr/new-mfr.component';
 import { SingleMfrComponent } from './pages/single-mfr/single-mfr.component';
+import { TaskComponent } from './pages/task/task.component';
+import { NewTaskComponent } from './pages/new-task/new-task.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SingleMfrComponent } from './pages/single-mfr/single-mfr.component';
     ProjectComponent,
     MfrComponent,
     NewMfrComponent,
-    SingleMfrComponent
+    SingleMfrComponent,
+    TaskComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

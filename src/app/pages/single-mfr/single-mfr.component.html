@@ -28,42 +28,51 @@
         <i class="tasks icon"></i>
         Tasks
       </h4>
-      <div class="ui list">
-        <a class="item">
-          <i class="tasks icon yellow"></i>
+      <div class="ui large animated celled list">
+        <a class="item" routerLink="task/12323">
+          <i class="yellow circle icon"></i>
           <div class="content">
             <div class="header">Buy Motherboard</div>
             <div class="description">Doy Bello</div>
           </div>
         </a>
         <a class="item">
-          <i class="exclamation icon red large"></i>
+          <i class="circle icon red"></i>
           <div class="content">
             <div class="header">Create mfr prototype</div>
             <div class="description">Virgilio Legaspi</div>
           </div>
         </a>
         <a class="item">
-          <i class="tasks icon green"></i>
+          <i class="circle green icon"></i>
           <div class="content">
             <div class="header">Create database</div>
             <div class="description">Melner balce</div>
           </div>
         </a>
         <a class="item">
-          <i class="tasks icon green"></i>
+          <i class="circle green icon"></i>
           <div class="content">
             <div class="header">This is fine</div>
             <div class="description">Someone</div>
           </div>
         </a>
         <a class="item">
-          <i class="tasks icon red"></i>
+          <i class="circle red icon"></i>
           <div class="content">
             <div class="header">Needed to be done! Imediately</div>
             <div class="description">Someone</div>
           </div>
         </a>
       </div>
+      <div class="ui basic segment right aligned">
+        <button class="ui button green labeled icon" routerLink="task/new">
+          Add task
+          <i class="tasks icon"></i>
+        </button>
+      </div>
+    </div>
+    <div class="eight wide column">
+      <router-outlet></router-outlet>
     </div>
   </div>
