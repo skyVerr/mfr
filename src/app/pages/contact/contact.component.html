@@ -10,19 +10,19 @@
           <tbody>
             <tr>
               <td class="two wide column">First</td>
-              <td>Virgilio</td>
+              <td>{{ contact?.firstname }}</td>
             </tr>
             <tr>
               <td>Middle</td>
-              <td>dela Cruz</td>
+              <td>{{ contact?.middlename }}</td>
             </tr>
             <tr>
               <td>Last</td>
-              <td>Legaspi</td>
+              <td>{{ contact?.lastname }}</td>
             </tr>
             <tr>
               <td>Nickname</td>
-              <td>Ver</td>
+              <td>{{ contact?.nickname }}</td>
             </tr>
           </tbody>
         </table>
@@ -35,27 +35,27 @@
             <tr>
               <td class="two wide column">Add 1</td>
               <td>
-                  41 B Otero Ave Mabayuan
+                  {{ contact?.address_1 }}
               </td>
             </tr>
             <tr>
             <tr>
               <td>Add 2</td>
               <td>
-                  41 A Acasia st. Gordon Heights
+                  {{ contact?.address_2 }}
               </td>
             </tr>
             <tr>
               <td>City</td>
               <td>
-                  Olongapo City
+                  {{ contact?.city }}
               </td>
             </tr>
             <tr>
               <td>State</td>
               <td>
                 <div class="ui input fluid">
-                  Zambales
+                  {{ contact?.state }}
                 </div>
               </td>
             </tr>
@@ -63,7 +63,7 @@
               <td>Zip code</td>
               <td>
                 <div class="ui input fluid">
-                  2200
+                  {{ contact?.zip }}
                 </div>
               </td>
             </tr>
@@ -80,67 +80,67 @@
           <tr>
             <td class="center aligned two wide column"><i class="mobile icon large grey"></i></td>
             <td>
-              092928360491
+              {{ contact?.home_phone }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="mobile alternate icon large grey"></i></td>
             <td>
-              09663314998
+              {{ contact?.work_phone }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="viber icon large purple"></i></td>
             <td>
-              verviberness
+              {{ contact?.viber }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="whatsapp icon large green"></i></td>
             <td>
-              versapp
+              {{ contact?.whatsapp}}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="skype icon large blue"></i></td>
             <td>
-              verskype
+              {{ contact?.skype}}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="envelope icon large orange"></i></td>
             <td>
-              verlegaspidc@gmail.com
+              {{ contact?.email}}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="facebook icon large blue"></i></td>
             <td>
-              vergwapo
+              {{ contact?.facebook }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><img src="assets/icons/zoom.png" class="ui avatar image"></td>
             <td>
-              verzoom
+              {{ contact?.zoom}}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="linkedin icon large blue"></i></td>
             <td>
-              verlinked
+              {{ contact?.linkedln }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="twitter icon large blue"></i></td>
             <td>
-              vertwitwit
+              {{ contact?.twitter }}
             </td>
           </tr>
           <tr>
             <td class="center aligned"><i class="birthday cake icon pink"></i></td>
             <td>
-              9 August 1998
+              {{ contact?.date_of_birth}}
               <!-- <div class="ui input fluid">
                 <input suiDatepicker ngModel name="date_of_birth"
                 pickerMode="date">
@@ -161,20 +161,20 @@
                 <td class="two wide column">Company</td>
                 <td>
                   <div class="ui input fluid">
-                    Gordon College
+                    {{ contact?.company}}
                   </div>
                 </td>
               </tr>
               <tr>
                 <td>Position</td>
                 <td>
-                  Student
+                  {{ contact?.position}}
                 </td>
               </tr>
               <tr>
                 <td>Website</td>
                 <td>
-                  verwebsite.com
+                  {{ contact?.website}}
                 </td>
               </tr>
             </tbody>
@@ -185,30 +185,15 @@
           </h4>
           <table class="ui definition table">
               <tbody>
-                <tr>
+                <tr *ngFor="let cf of customFields">
                   <td>
-                    Spouse
+                    {{ cf.field }}
                   </td>
                   <td>
-                    Catriona Gray
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Spouse Date of birth
-                  </td>
-                  <td>
-                    25 August 1999
+                    {{ cf.value }}
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    Eldest child
-                  </td>
-                  <td>
-                    Abraham
-                  </td>
-                </tr>
               </tbody>
           </table>
     </div>

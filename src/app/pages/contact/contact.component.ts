@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Contact } from 'src/app/models/contact.interface';
+import { ActivatedRoute } from '@angular/router';
+import { ContactService } from 'src/app/services/contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contact:Contact;
+  customFields: any[];
 
-  ngOnInit() {
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private contactService: ContactService
+  ) {
+    this.customFields = new Array();
+   }
+
+  async ngOnInit() {
+    try {
+      const contact_id = parseInt(this.activateRoute.snapshot.paramMap.get('id'));
+      this.contact = await this.contactService.fetchContact(contact_id).toPromise();
+      this.customFields = await this.contactService.fetchCustomFieldsByContact(this.contact).toPromise();
+    } catch (error) {
+
+    }
   }
 
 }

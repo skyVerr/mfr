@@ -18,5 +18,13 @@ export class ContactService {
   addCustomFields(customFields){
     return this.http.post(Api.URL+'createCustomFields.php',JSON.stringify(customFields));
   }
+
+  fetchContact(contact_id):Observable<Contact>{
+    return this.http.get<Contact>(Api.URL+'selectContact.php?contact_id='+contact_id);
+  }
+
+  fetchCustomFieldsByContact(contact:Contact):Observable<any[]>{
+    return this.http.get<any[]>(Api.URL+'selectCustomField.php?contact_id='+contact.contact_id);
+  }
   
 }
