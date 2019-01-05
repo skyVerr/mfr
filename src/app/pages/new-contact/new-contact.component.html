@@ -1,4 +1,4 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+<form #f="ngForm" (keydown.enter)="handleEnterKeyPress($event)" (ngSubmit)="onSubmit(f)">
   <div class="ui grid">
         <div class="row">
           <div class="six wide column">
@@ -239,9 +239,13 @@
                       <td>
                         <div class="ui input fluid">
                           <input type="text" #cvalue autocomplete="off" spellcheck="off"
-                           (keyup.enter)="addCustom(cfield.value,cvalue.field)">
+                           (keyup.enter)="addCustom(cfield,cvalue)">
                         </div>
                       </td>
+                    </tr>
+                    <tr *ngFor="let cf of customFields">
+                      <td>{{  cf.field  }}</td>
+                      <td>{{  cf.value  }}</td>
                     </tr>
                   </tbody>
               </table>
